@@ -2,7 +2,7 @@ simple-list-interpreter
 =======================
 
 A simple interpreter to explore the compiler principles.
-It processes a small list language. The grammar is:  
+It is implemented by LL(1) and processes a small list language. The grammar is:  
 
 statlist: stat+  
 stat: ID '=' expr  
