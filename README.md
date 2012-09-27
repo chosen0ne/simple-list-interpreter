@@ -5,14 +5,10 @@ A simple interpreter to explore the compiler principles.
 It is implemented by LL(1) and processes a small list language. The grammar is:  
 
 statlist: stat+  
-stat: ID '=' expr  
-    | 'print' expr (, expr)*  
-expr: multipart ('+' multipart)*  
-    | STR  
+stat: ID '=' expr  | 'print' expr (, expr)*  
+expr: multipart ('+' multipart)*  | STR  
 multipart: primary ('*' primary)*  
-primary: INT  
-    | ID  
-    | '[' expr (',', expr)* ']'  
+primary: INT  | ID  | '[' expr (',', expr)* ']'  
 INT: (1..9)(0..9)*  
 ID: (a..z | A..Z)*  
 STR: (\".*\") | (\'.*\')  
